@@ -1,0 +1,112 @@
+.jquery-process-step {
+    ol.steps::-webkit-scrollbar { /* chrome 隐藏滚动条*/
+        display: none;
+    }
+
+    ol.steps{
+        list-style: none;
+        display: flex;
+        overflow-x: auto;
+        height: 64px;
+    }
+
+    ol.steps:after,ol.steps li:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    ol.steps li{
+        float: left;
+        flex: 1;
+        position: relative;
+        min-width: 120px;
+    }
+
+    ol.steps li .step-line{
+        height: 5px;
+        background-color: #e0e0e0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+        margin-top: calc(15px - (5px / 2));
+    }
+
+    ol.steps li.step-active .step-line{
+        background-color: #00a854;
+        // background: linear-gradient(to right, #00a854 0%, #e0e0e0 75%);
+        // background: -webkit-linear-gradient(to right, #00a854 0%, #e0e0e0 75%);
+        // box-shadow: inset 0 1px 1px #00a854;
+    }
+
+    ol.steps li.step-active-current .step-line {
+        background: linear-gradient(0deg, #00a854 0%, #e0e0e0 75%) !important;
+        background: -webkit-linear-gradient(0deg, #00a854 0%, #e0e0e0 75%) !important; 
+    }
+
+    ol.steps li.step-active-current .step-text, ol.steps li.step-active .step-text {
+        color: #00a854;
+    }
+
+    ol.steps .step-content{
+        position: absolute;
+        top:0;
+        left:-15px ;
+        text-align: center;
+    }
+
+    ol.steps li .step-content .step-num {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        color: #fff;
+        background-color: #b9b9b9;
+        line-height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        border: 2px solid rgba(224,224,224,1);
+        box-sizing: border-box;
+        margin-bottom: 8px;
+    }
+
+    ol.steps li.step-active .step-content .step-num, ol.steps li.step-active-current .step-content .step-num {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        color: #fff;
+        background-color: #b9b9b9;
+        line-height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        border: 2px solid #00a854;
+        box-sizing: border-box;
+        margin-bottom: 8px;
+    }
+
+    
+    
+    ol.steps li.step-active .step-content .step-num, ol.steps li.step-active-current .step-content .step-num{
+        background-color: #00a854;
+    }
+
+    ol.steps li.step-end{
+        width: 120px!important;
+        flex: inherit;
+    }
+    
+    ol.steps li.step-end .step-line{
+        display: none;
+    }
+
+    ol.steps-cancel li.step-active:nth-last-of-type(2) .step-line {
+        background: linear-gradient(0deg, #00a854 0%, yellow 50%, #db0000 75%) !important;
+        background: -webkit-linear-gradient(0deg, #00a854 0%, yellow 50%, #db0000 75%) !important;
+    }
+    
+    ol.steps-cancel li.step-end .step-num {
+        background-color: #db0000 !important;
+        border: 2px solid #db0000 !important;
+    }
+
+    ol.steps-cancel li.step-end .step-text {
+        color: #db0000 !important;
+    }
+}
