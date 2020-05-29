@@ -1,5 +1,6 @@
 ## jquery-process-step
-[English(./README.md) | 中文文档 ]
+[comment]: <> (English | [简体中文](./README.zh-Hans.md) | [繁體中文](./README.zh-Hant.md))
+[English(./README.md)] | 中文文档
 
 ### 介绍
 通过jQuery, 创建步骤条UI。
