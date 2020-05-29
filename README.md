@@ -1,6 +1,6 @@
 ## jquery-process-step
-[comment]: <> (English | [简体中文](./README.zh-Hans.md) | [繁體中文](./README.zh-Hant.md))
-English | [中文文档(./README.zh.md)]
+[^_^]: # (English | [简体中文](./README.zh-Hans.md) | [繁體中文](./README.zh-Hant.md))
+English | [中文文档](./README.zh.md)
 
 ### Introduction
 create process steps UI by jQuery for Website.
